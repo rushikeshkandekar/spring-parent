@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017-2022 NXGN Management, LLC. All Rights Reserved. -->
 
+<!--suppress ALL -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<distributionManagement>
-		<repository>
-			<id>nextgen-pxp-mf-build--pxp-mf</id>
-			<name>nextgen-pxp-mf-build--pxp-mf</name>
-			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>
-		</repository>
-	</distributionManagement>
+<!--	<distributionManagement>-->
+<!--		<repository>-->
+<!--			<id>nextgen-pxp-mf-build&#45;&#45;pxp-mf</id>-->
+<!--			<name>nextgen-pxp-mf-build&#45;&#45;pxp-mf</name>-->
+<!--			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>-->
+<!--		</repository>-->
+<!--	</distributionManagement>-->
 
-	<repositories>
-		<repository>
-			<id>nextgen-pxp-mf-build--pxp-mf-central</id>
-			<name>nextgen-pxp-mf-build--pxp-mf Repository Mirror</name>
-			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>nextgen-pxp-mf-build&#45;&#45;pxp-mf-central</id>-->
+<!--			<name>nextgen-pxp-mf-build&#45;&#45;pxp-mf Repository Mirror</name>-->
+<!--			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>-->
+<!--			<releases>-->
+<!--				<enabled>true</enabled>-->
+<!--			</releases>-->
+<!--			<snapshots>-->
+<!--				<enabled>true</enabled>-->
+<!--			</snapshots>-->
+<!--		</repository>-->
+<!--	</repositories>-->
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nextgen-pxp-mf-build--pxp-mf-plugin-mirror</id>
-			<name>nextgen-pxp-mf-build--pxp-mf Repository Mirror - Plugins</name>
-			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>
-		</pluginRepository>
-	</pluginRepositories>
+<!--	<pluginRepositories>-->
+<!--		<pluginRepository>-->
+<!--			<id>nextgen-pxp-mf-build&#45;&#45;pxp-mf-plugin-mirror</id>-->
+<!--			<name>nextgen-pxp-mf-build&#45;&#45;pxp-mf Repository Mirror - Plugins</name>-->
+<!--			<url>https://nextgen-pxp-mf-build-997401518295.d.codeartifact.us-east-2.amazonaws.com/maven/pxp-mf/</url>-->
+<!--		</pluginRepository>-->
+<!--	</pluginRepositories>-->
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -40,7 +41,7 @@
 		<version>2.6.3</version>
 	</parent>
 
-	<groupId>com.nextgen.pxp</groupId>
+	<groupId>com.crossasyst</groupId>
 	<artifactId>spring-parent</artifactId>
 	<version>3.0.0</version>
 	<packaging>pom</packaging>
@@ -51,8 +52,8 @@
 
 	<developers>
 		<developer>
-			<organization>NXGN Management, LLC</organization>
-			<url>https://www.nextgen.com/</url>
+			<organization>crossasyst</organization>
+			<url>https://www.crossasyst.com/</url>
 		</developer>
 	</developers>
 
@@ -352,6 +353,7 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
 				<configuration>
+					<!--suppress UnresolvedMavenProperty -->
 					<skip>${maven.test.skip}</skip>
 					<destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
 					<dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
